@@ -1,33 +1,36 @@
-//complete this code
 class Rectangle {
-	constructor(width, height){
+
+    constructor(width, height) {
         this._width = width;
         this._height = height;
     }
 
-    get width(){
+    get width() {
         return this._width;
     }
 
-    get height(){
+    get height() {
         return this._height;
     }
 
-    getArea(){
+    getArea() {
         return this._width * this._height;
     }
 }
 
-class Square extends Animal {
-	constructor(side){
+
+class Square extends Rectangle {
+
+    constructor(side) {
         super(side, side);
     }
 
-    getPerimeter(){
-        return this.width*4;
+    getPerimeter() {
+        return this.width * 4;
     }
 }
 
-// Do not change the code below this line
+
+// make classes globally accessible
 window.Rectangle = Rectangle;
 window.Square = Square;
